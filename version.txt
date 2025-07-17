@@ -1,0 +1,39 @@
+# UTF-8
+#
+# For more details about fixed file info 'ffi' see:
+# http://msdn.microsoft.com/en-us/library/ms646997.aspx
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    # La versión del archivo y del producto se definen como tuplas de números.
+    filevers=(1, 0, 0, 0),
+    prodvers=(1, 0, 0, 0),
+    # Máscara de bits para indicar qué campos son válidos.
+    mask=0x3f,
+    # Banderas del archivo (ej: 0x0 para release, 0x2 para prerelease)
+    flags=0x0,
+    # Sistema operativo de destino (VOS_NT_WINDOWS32)
+    OS=0x40004,
+    # Tipo de archivo (VFT_APP para una aplicación)
+    fileType=0x1,
+    # Subtipo de archivo (0 para ninguno)
+    subtype=0x0,
+    # Fecha y hora del archivo (no se suelen modificar)
+    date=(0, 0)
+    ),
+  kids=[
+    StringFileInfo(
+      [
+      StringTable(
+        u'040a04b0', # 040a es para Español (Modern Sort), 04b0 es para Unicode
+        [StringStruct(u'CompanyName', u'Catalin Andrei Sonca Dobinciuc'),
+        StringStruct(u'FileDescription', u'Instalador Automatizado de Megas PDA'),
+        StringStruct(u'FileVersion', u'1.0.0.2'),
+        StringStruct(u'InternalName', u'PDA'),
+        StringStruct(u'LegalCopyright', u'Copyright (c) 2025 Catalin Andrei Sonca Dobinciuc'),
+        StringStruct(u'OriginalFilename', u'IPDA.exe'),
+        StringStruct(u'ProductName', u'Instalador Automatizado PDA'),
+        StringStruct(u'ProductVersion', u'1.0.0.2')])
+      ]),
+    VarFileInfo([VarStruct(u'Translation', [1034, 1200])]) # 1034 es el decimal de 0x040a
+  ]
+)
